@@ -1,0 +1,14 @@
+{
+  "title": "ROom title",
+  "room_type": "shared",
+  "building_type": "home",
+  "utilities_included": true,
+  "pets_allowed": true,
+  "rent": 1234,
+  "address": "Hyderabad",
+  "description": "Very well",
+  "first_date_available": "2018-02-12 19:23:45",
+  "email": "dummy@gmail.com",
+  "phone": 1234312121,
+  "images": []
+}

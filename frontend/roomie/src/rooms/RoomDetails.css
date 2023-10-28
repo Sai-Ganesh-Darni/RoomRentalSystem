@@ -1,0 +1,134 @@
+#room_details_page {
+  margin: 100px 100px;
+  background-color: lightgray;
+  border-radius: 20px;
+}
+
+#room_details_page .room_header {
+  background-color: rgba(77, 180, 13, 0.7);
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 4px 4px;
+}
+
+#room_details_page .listing_information {
+  margin-top: 40px;
+}
+#room_details_page .address {
+}
+#room_details ul {
+  display: flex;
+}
+#room_details ul li {
+  list-style: none;
+  padding: 20px 20px;
+  width: 100%;
+}
+#room_details ul li h4 {
+  border-bottom: 2px solid black;
+}
+#room_details .allowed,
+#room_details .notallowed {
+  border-radius: 20px;
+  padding: 7px 7px;
+}
+#room_details .allowed {
+  background-color: rgba(198, 246, 213, 0.7);
+  border-radius: 20px;
+}
+#room_details .notallowed {
+  background-color: rgba(254, 252, 191, 0.7);
+}
+
+#room_details .answer {
+  font-weight: bold;
+}
+
+/* test */
+.example_g {
+  font-family: "Poppins";
+  width: 320px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #494949;
+  background: #ffffff;
+  text-transform: uppercase;
+  /* #494949.: 800 {
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 7px 7px;
+  } */
+  letter-spacing: 4px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.example_g:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #fff700,
+    #ff7000,
+    #ff00fe,
+    #3ff4eb,
+    #9e00ff,
+    #00beff,
+    #ff00dd,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.example_g:active {
+  color: #000;
+}
+
+.example_g:active:after {
+  background: transparent;
+}
+
+.example_g:hover {
+  transform: scale(1.05);
+}
+
+.example_g:hover:before {
+  opacity: 1;
+}
+
+.example_g:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

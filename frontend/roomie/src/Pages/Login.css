@@ -1,0 +1,45 @@
+#container2 {
+  width: 1000px;
+  border: 1px solid whitesmoke;
+  margin-top: 70px;
+  padding-left: 50px;
+  margin-left: 150px;
+  background-color: aliceblue;
+  box-shadow: 3rem;
+}
+#Sih {
+  font-weight: 800;
+  padding-top: 50px;
+}
+#container2 .S1 {
+  font-weight: 2;
+  color: slategray;
+}
+#snv {
+  display: inline;
+  padding-left: 1px;
+}
+.inpT {
+  border-radius: 4px;
+  width: 400px;
+  border-color: white;
+  height: 35px;
+}
+#FPP {
+  color: red;
+  padding-left: 2px;
+  font-weight: lighter;
+}
+.buttonSig {
+  width: 350px;
+  height: 40px;
+  margin-left: 20px;
+  background-color: yellow;
+  border-radius: 4px;
+  border-color: yellow;
+}
+#imageLogin {
+  width: 500px;
+  height: 500px;
+  margin-left: 100px;
+}

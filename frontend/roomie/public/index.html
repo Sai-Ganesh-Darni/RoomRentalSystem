@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- for footer icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
+    <title>Roomie App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="backdrop-hook"></div>
+    <div id="modal-hook"></div>
+    <div id="drawer-hook"></div>
+    <div id="root"></div>
+
+    <!-- 
+    <script>
+      let autocomplete;
+      function initMap() {
+        autocomplete = new google.maps.places.Autocomplete(
+          document.getElementById("autocomplete"),
+          {
+            types: ["establishment"],
+            componentRestrictions: { country: ["AU"] },
+            fields: ["place_id", "geometry", "name"],
+          }
+        );
+
+        autocomplete.addListener("place_changed", onPlaceChanged);
+      }
+      function onPlaceChanged() {
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+          document.getElementById("autocomplete").placeholder = "Enter a Place";
+        } else {
+          document.getElementById("details").innerHTML = place.name;
+        }
+      }
+    </script>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsb5YruYB5OMn5bgP_Jn3F0d3bfHqKIdc&libraries=places&callback=initMap"
+    ></script> -->
+  </body>
+</html>
