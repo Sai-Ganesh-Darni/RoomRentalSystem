@@ -53,3 +53,11 @@
   width: 200px;
   /* margin-right: 10px; */
 }
+
+.all-room-btn{
+  text-decoration: none;
+  color: white;
+  background-color:blueviolet;
+  padding: 1em;
+  border-radius: 10px;
+}

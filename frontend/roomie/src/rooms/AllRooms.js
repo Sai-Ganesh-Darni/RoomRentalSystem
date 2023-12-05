@@ -14,7 +14,7 @@ const AllRooms = () => {
 
     const [searchParams, setSearchParams] = useSearchParams();
     const q = searchParams.get("q");
-    const [query, setQuery] = useState();
+    const [query, setQuery] = useState("");
 
 
     useEffect(() => {
@@ -26,10 +26,9 @@ const AllRooms = () => {
             queryOptions += `q=${query}`;
         }
 
-        console.log(
-            "Query String in Use Effect All Products Component >>>",
-            queryOptions
-        );
+        // console.log(
+        //     queryOptions
+        // );
 
         const getRooms = async () => {
             try {
@@ -60,7 +59,7 @@ const AllRooms = () => {
     };
     return (
         <>
-            {/* <div id="product_filter">
+            <div id="product_filter">
                 <div className="query_div">
                     <form>
                         <input
@@ -71,7 +70,7 @@ const AllRooms = () => {
                         />
                     </form>
                 </div>
-            </div> */}
+            </div>
             <ErrorModal error={error} onClear={clearError} />
             {isLoading && <LoadingSpinner />}
             <div id="product_list_component">

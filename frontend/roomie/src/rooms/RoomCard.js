@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./RoomCard.css";
 const RoomCard = (props) => {
   const navigate = useNavigate();
-  console.log("in room card props.id >>>> ", props.id);
+  // console.log("in room card props.id >>>> ", props.id);
   const getDetailsHandler = () => {
     navigate(`/roomdetails/${props.id}`);
   };

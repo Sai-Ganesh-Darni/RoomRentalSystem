@@ -147,9 +147,10 @@ const updateRoomById = async (req, res, next) => {
 const getAllRooms = async (req, res, next) => {
   try {
     // 1A) Filtering
-    const queryObj = { ...req.query };
+    const queryObj = { ...req.query };    
+    console.log(req.body);
     const excludedFields = ["page", "sort", "limit", "fields"];
-    excludedFields.forEach((el) => delete queryObj[el]);
+    excludedFields.forEach((el) => delete queryObj[el]);    
 
     // 1B) Advanced Filtering
     let queryStr = JSON.stringify(queryObj);
@@ -164,9 +165,11 @@ const getAllRooms = async (req, res, next) => {
 
     // 2) SORTING
     let query = Room.find(JSON.parse(queryStr));
+    console.log(query);
     if (req.query.sort) {
       const sortBy = req.query.sort.split(",").join(" ");
       query = query.sort(sortBy);
+      console.log(query);
       // sort('field1' 'field2');
     }
 
