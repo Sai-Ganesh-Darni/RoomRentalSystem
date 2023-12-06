@@ -29,7 +29,8 @@ const AllRooms = () => {
         // console.log(
         //     queryOptions
         // );
-
+        
+        
         const getRooms = async () => {
             try {
                 setIsLoading(true);
@@ -54,6 +55,39 @@ const AllRooms = () => {
         getRooms();
     }, [query]);
 
+    // useEffect(() => {
+    //     let queryOptions = "";
+      
+    //     if (query && query.length > 2) {
+    //       queryOptions = query;
+    //     }
+    //     // console.log(queryOptions);
+      
+    //     const fetchRooms = async () => {
+    //       setIsLoading(true);
+    //       setError(false);
+    //       try {
+    //         const baseUrl = `${process.env.REACT_APP_BACKEND_URL}/rooms/allrooms`;
+    //         const url = queryOptions ? `${baseUrl}?name=${queryOptions}` : baseUrl;
+    //         const response = await fetch(
+    //           url
+    //         );
+                
+    //         const responseData = await response.json();
+      
+    //         if (!response.ok) {
+    //           throw new Error(responseData.message);
+    //         }
+      
+    //         setLoadedProducts(responseData.rooms);
+    //       } catch (err) {
+    //         setError(err.message);
+    //       }
+    //       setIsLoading(false);
+    //     };
+      
+    //     fetchRooms();
+    //   }, [query]);
     const clearError = () => {
         setError(false);
     };
@@ -61,14 +95,14 @@ const AllRooms = () => {
         <>
             <div id="product_filter">
                 <div className="query_div">
-                    <form>
+                    {/* <form>
                         <input
                             type="text"
                             placeholder="Search..."
                             onChange={(e) => setQuery(e.target.value)}
                             value={query}
                         />
-                    </form>
+                    </form> */}
                 </div>
             </div>
             <ErrorModal error={error} onClear={clearError} />

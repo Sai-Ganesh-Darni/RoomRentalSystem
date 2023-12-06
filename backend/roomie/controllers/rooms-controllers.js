@@ -207,6 +207,75 @@ const getAllRooms = async (req, res, next) => {
     });
   }
 };
+// async function getAllRooms(req, res) {
+//   try {
+//     let queryObj = { ...req.query };
+//     const excludedFields = ['page', 'sort', 'limit', 'fields'];
+//     excludedFields.forEach(el => delete queryObj[el]);
+
+//     let queryStr = JSON.stringify(queryObj);
+//     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
+
+//     let query = Room.find(JSON.parse(queryStr));
+
+//     // Sorting
+//     if (req.query.sort) {
+//       const sortBy = req.query.sort.split(',').join(' ');
+//       query = query.sort(sortBy);
+//     }
+
+//     // Field limiting
+//     if (req.query.fields) {
+//       const fields = req.query.fields.split(',').join(' ');
+//       query = query.select(fields);
+//     } else {
+//       query = query.select('-__v');
+//     }
+
+//     // Pagination
+//     const page = req.query.page * 1 || 1;
+//     const limit = req.query.limit * 1 || 100;
+//     const skip = (page - 1) * limit;
+//     query = query.skip(skip).limit(limit);
+
+//     const rooms = await query;
+
+//     res.status(200).json({
+//       status: 'success',
+//       results: rooms.length,
+//       data: {
+//         rooms
+//       }
+//     });
+//   } catch (err) {
+//     res.status(404).json({
+//       status: 'fail',
+//       message: err
+//     });
+//   }
+// }
+
+// const getAllRooms = async (req, res, next) => {
+//   let rooms;
+//   try {
+//     console.log(req.query);
+//     if (req.query.name) {
+//       console.log(req.query.name);
+//       const regex = new RegExp(escapeRegex(req.query.name), 'gi');
+//       rooms = await Room.find({ title: regex });
+//     } else {
+//       rooms = await Room.find({});
+//     }
+//   } catch (err) {
+//     const error = new HttpError(
+//       'Fetching rooms failed, please try again later.',
+//       500
+//     );
+//     return next(error);
+//   }
+
+//   res.json({ rooms: rooms.map((room) => room.toObject({ getters: true })) });
+// };
 
 const getRoomById = async (req, res, next) => {
   try {
@@ -228,6 +297,10 @@ const getRoomById = async (req, res, next) => {
     });
   }
 };
+
+function escapeRegex(text) {
+  return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+}
 
 const getRoomsByUserId = async (req, res, next) => {
   const userId = req.params.userId;

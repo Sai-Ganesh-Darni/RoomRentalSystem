@@ -150,10 +150,7 @@ function App() {
           path="*"
           element={
             <h1>
-              Error
-              <p>Error</p>
-              <p>Error</p>
-              <p>Error</p>
+              Error 404: Page Not Found <br />{" "}            
             </h1>
           }
         />

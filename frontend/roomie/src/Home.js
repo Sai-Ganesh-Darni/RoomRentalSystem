@@ -14,7 +14,7 @@ const Home = (props) => {
           </p>
           <br></br>
           <br></br>
-          <form className="search_form">
+          {/* <form className="search_form">
             <input
               type="text"
               placeholder="Enter a City "
@@ -28,10 +28,10 @@ const Home = (props) => {
               {" "}
               Search
             </button>
-          </form>
+          </form> */}
           <br></br>
           <br></br>
-          <NavLink className='all-room-btn' to='/RoomList'>All available rooms</NavLink>
+          <NavLink className='all-room-btn' to='/RoomList'>All Available rooms</NavLink>
         </div>
         <img src={cityscapes} id="homeimg" alt="homepageimg" />
       </div>
